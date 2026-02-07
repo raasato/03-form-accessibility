@@ -29,54 +29,72 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Experience the Unknown</h1>
-      <p>
-        Reserve your seat and embark on a surprise culinary adventure.
-      </p>
-      <div class="reservation-card">
-        <h2>Reserve Now</h2>
-        <div class="form-placeholder">
-          <form>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Name">
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email">
-            </div>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Zip">
-            </div>
-            <div class="mb-3">
-              <input type="number" class="form-control" placeholder="Party Size">
-            </div>
-            <div class="mb-3">
-              <select class="form-select">
-                <option selected>Choose...</option>
-                <option value="mild">Mild</option>
-                <option value="med">Medium</option>
-                <option value="spicy">Spicy</option>
-              </select>
-            </div>
-            <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox">
-              <label class="form-check-label">
-                Would you like to pretend it's your birthday for free cake?
-              </label>
-            </div>
-            <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox">
-              <label class="form-check-label">
-                I accept that I have no idea where I'll dine, and that's OK.
-              </label>
-            </div>
-            <a href="#" class="btn btn-lg btn-primary">Book My Mystery Meal!</a>
-          </form>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Experience the Unknown</h1>
+        <p>
+          Reserve your seat and embark on a surprise culinary adventure.
+        </p>
+        <div class="reservation-card">
+          <h2>Reserve Now</h2>
+          <div class="form-placeholder">
+            <form>
+              <fieldset>
+                <legend class="h5 mb-3">Reservation details</legend>
+
+                <div class="mb-3">
+                  <label for="res-name" class="form-label visually-hidden">Name</label>
+                  <input id="res-name" name="name" type="text" class="form-control" autocomplete="name" placeholder="Full name" required autofocus>
+                </div>
+
+                <div class="mb-3">
+                  <label for="res-email" class="form-label visually-hidden">Email</label>
+                  <input id="res-email" name="email" type="email" class="form-control" autocomplete="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="res-zip" class="form-label visually-hidden">Zip</label>
+                  <input id="res-zip" name="zip" type="text" class="form-control" inputmode="numeric" autocomplete="postal-code" placeholder="Zip" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="res-party" class="form-label visually-hidden">Party Size</label>
+                  <input id="res-party" name="partySize" type="number" class="form-control" min="1" placeholder="Party Size" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="res-heat" class="form-label visually-hidden">Preferred heat level</label>
+                  <select id="res-heat" name="heatLevel" class="form-select" required>
+                    <option value="" selected disabled>Preferred heat level</option>
+                    <option value="mild">Mild</option>
+                    <option value="med">Medium</option>
+                    <option value="spicy">Spicy</option>
+                  </select>
+                </div>
+
+                <div class="form-check mb-3">
+                  <input id="res-bday" name="birthdayPretend" class="form-check-input" type="checkbox">
+                  <label class="form-check-label" for="res-bday">
+                    Would you like to pretend it's your birthday for free cake?
+                  </label>
+                </div>
+
+                <div class="form-check mb-3">
+                  <input id="res-consent" name="consent" class="form-check-input" type="checkbox" required>
+                  <label class="form-check-label" for="res-consent">
+                    I accept that I have no idea where I'll dine, and that's OK.
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-lg btn-primary">Book My Mystery Meal!</button>
+              </fieldset>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
     <div class="container">
